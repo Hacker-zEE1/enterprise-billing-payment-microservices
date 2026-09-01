@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: ${CUSTOMER_DB_URL}
+    username: ${CUSTOMER_DB_USERNAME}
+    password: ${CUSTOMER_DB_PASSWORD}
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+  flyway:
+    enabled: true
