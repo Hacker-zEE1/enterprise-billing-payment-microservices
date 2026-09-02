@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: ${ACCOUNT_DB_URL}
+    username: ${ACCOUNT_DB_USERNAME}
+    password: ${ACCOUNT_DB_PASSWORD}
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+  flyway:
+    enabled: true
+
+clients:
+  customer-service:
+    base-url: ${CUSTOMER_SERVICE_URL}

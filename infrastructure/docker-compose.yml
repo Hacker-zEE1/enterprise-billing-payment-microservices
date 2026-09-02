@@ -12,5 +12,18 @@ services:
     volumes:
       - customer_postgres_data:/var/lib/postgresql/data
 
+  account-db:
+      image: postgres:17
+      container_name: account-postgres
+      environment:
+        POSTGRES_DB: account_db
+        POSTGRES_USER: account_user
+        POSTGRES_PASSWORD: account_password
+      ports:
+        - "5434:5432"
+      volumes:
+        - account_postgres_data:/var/lib/postgresql/data
+
 volumes:
   customer_postgres_data:
+  account_postgres_data:
