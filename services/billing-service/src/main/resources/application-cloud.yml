@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: ${BILLING_DB_URL}
+    username: ${BILLING_DB_USERNAME}
+    password: ${BILLING_DB_PASSWORD}
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+  flyway:
+    enabled: true
+
+clients:
+  account-service:
+    base-url: ${ACCOUNT_SERVICE_URL}

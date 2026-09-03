@@ -24,6 +24,19 @@ services:
       volumes:
         - account_postgres_data:/var/lib/postgresql/data
 
+  billing-db:
+    image: postgres:17
+    container_name: billing-postgres
+    environment:
+      POSTGRES_DB: billing_db
+      POSTGRES_USER: billing_user
+      POSTGRES_PASSWORD: billing_password
+    ports:
+      - "5435:5432"
+    volumes:
+      - billing_postgres_data:/var/lib/postgresql/data
+
 volumes:
   customer_postgres_data:
   account_postgres_data:
+  billing_postgres_data:
